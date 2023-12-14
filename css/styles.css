@@ -16,6 +16,16 @@ body {
   background-color: white;
 }
 
+/* Style rule to make list markers navy. Added for requirement. From https://www.w3schools.com/css/css_pseudo_classes.asp */
+figcaption li::first-letter {
+  color: navy;
+}
+
+/* Style rule to make list markers navy. Added for requirement. From https://www.w3schools.com/css/css_pseudo_classes.asp */
+*::marker {
+  color: navy;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -27,12 +37,12 @@ img {
 }
 
 /* Style rules to show mobile class and hide tab-desk class */
-.tab-desk {
+.tab-desk, .desktop {
   display: none;
 }
 
 /* Style  rules for header area */
-.mobile h1, h3 {
+.mobile h1, .mobile h3 {
   padding: 2%;
   text-align: center;
 }
@@ -43,6 +53,11 @@ img {
 
 .mobile h3 {
   font-family: 'Lora', serif;
+}
+
+/* Style rules for certification list */
+.mobile ul  {
+  background-color: #E8E8E8;
 }
 
 /* Style rules for navigation area */
@@ -127,7 +142,7 @@ figcaption {
   margin-left: 10%;
 }
 
-#contact {
+#contact p{
   text-align: center;
 }
 
@@ -158,6 +173,16 @@ footer a {
   text-decoration: none;
 }
 
+/* Media Query for mobile Viewport */
+@media screen and (min-width: 1px), print {
+
+  /* Style rules for certification list */
+  div #list {
+    background-color: #E8E8E8;
+  }
+
+}
+
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print {
 
@@ -184,6 +209,7 @@ footer a {
   .grid {
     display: grid;
     grid-template-columns: auto auto;
+    background-color: #E8E8E8;
     grid-gap: 10px;
   }
 
@@ -217,6 +243,42 @@ footer a {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: left;
     padding: 20px;
+  }
+
+  /* Style rules for certification table */
+
+  table {
+    border: 1px solid #2a1f14;
+    border-collapse: collapse;
+  }
+
+  #table {
+    background-color: #E8E8E8;
+  }
+
+  #table p{
+    text-align: center;
+  }
+
+  caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+  }
+
+  th, td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+  }
+
+  th {
+    background-color: #2a1f14;
+    color: #fff;
+    font-size: 1.15em;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #fff;
   }
 
 }
