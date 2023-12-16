@@ -16,16 +16,6 @@ body {
   background-color: white;
 }
 
-/* Style rule to make list markers navy. Added for requirement. From https://www.w3schools.com/css/css_pseudo_classes.asp */
-figcaption li::first-letter {
-  color: navy;
-}
-
-/* Style rule to make list markers navy. Added for requirement. From https://www.w3schools.com/css/css_pseudo_classes.asp */
-*::marker {
-  color: navy;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -84,6 +74,11 @@ nav li a {
   text-decoration: none;
 }
 
+ol, ul {
+  padding-left: 0;
+  margin-left: 5%;
+}
+
 /* Style rules for main content */
 main {
   padding: 2%;
@@ -100,6 +95,7 @@ main h3 {
 
 main ul {
   list-style: square;
+  padding-left: 0;
 }
 
 .link {
@@ -140,6 +136,7 @@ figcaption {
 
 #info ul {
   margin-left: 10%;
+  
 }
 
 #contact p{
@@ -174,11 +171,34 @@ footer a {
 }
 
 /* Media Query for mobile Viewport */
-@media screen and (min-width: 1px), print {
+@media screen and (max-width: 620px) {
 
   /* Style rules for certification list */
   div #list {
     background-color: #E8E8E8;
+  }
+
+  /* Style rules for grids */
+
+  .grid, .grid3 {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #E8E8E8;
+    grid-gap: 10px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    background-color: #F7F5E6;
+    padding: 10px;
+  }
+
+  .grid2 div {
+    grid-template-columns: auto;
+    background-color: #F7F5E6;
+    text-align: left;
+    padding: 20px;
   }
 
 }
@@ -296,10 +316,16 @@ footer a {
   }
 
   nav li a:hover {
-      color: navy;
-      background-color: white;
-      opacity: 0.5;
+    color: navy;
+    background-color: white;
+    opacity: 0.5;
   }
+
+  a:hover {
+    color: green;
+    background-color: white;
+    opacity: 0.5;
+}
 
   /* Desktop Viewport: Style rules for main content */
   #info ul {
